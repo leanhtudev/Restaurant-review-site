@@ -1,0 +1,65 @@
+.container-fluid{
+	font-family: Comic Sans MS;
+}
+
+#map{
+	height: 1000px;
+	width: 70%;
+	float:left;
+	position: relative;
+}
+#info{
+	width: 30%;
+	height: 300px;
+	float:left;
+	padding: 10px;
+}
+#panel{
+	height:75px;
+}
+#infoRest{
+	overflow: auto;
+	height: 500px;
+	margin-bottom: 10px;
+}
+
+
+#addRest{
+	position: absolute;
+	width: 400px;	
+	margin: 0 auto;
+	border-radius: 20px;
+	opacity: 0.95;
+	left:30%;
+	top: 50%;	
+}
+.restDetails{
+	
+	border: 1px solid grey;
+	margin: 2px;
+	
+}
+h1{
+	padding-left: 5px;
+}
+.ratings{
+	margin-left: 30px;
+	
+}
+.comment{
+	margin-left: 40px;
+}
+input{
+	position: absolute;
+	margin-left: 20px;
+}
+
+#addReview,#rate{
+	position: relative;
+}
+#buttonSearch,#addReviewButton{
+	margin-top: 25px;
+}
+#tool{
+	margin-top: 5px;
+}

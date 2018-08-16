@@ -1,0 +1,99 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	</head>
+	<body>
+		<div class="container-fluid">
+			
+				<div id="panel"><h1 style="text-align: center">RESTAURANT REVIEW SITE</h1></div>
+				<div id="map" ></div>
+				<div id="info">
+					<div id="infoRest"></div>
+					<button onclick="refresh()" class="btn btn-success">Refresh</button>
+					<div id="tool">
+						<div id="rate">
+							<div class="form-group">
+							  <label for="usr">MinStar:</label>
+							  <input type="number" name="minStar" class="form-control" id="min">
+							</div>
+							<br>
+							<div class="form-group">
+							  <label for="usr">MaxStar:</label>
+							  <input id="max" type="number" name="maxStar" class="form-control">
+							</div>						
+							<button onclick="showAllRest()" id="buttonSearch" class="btn btn-success">Search</button>
+						</div>
+						<br><br>		
+						<div id="addReview" hidden="hidden">
+							<h1>Add new review for this Restaurant</h1>
+							<div class="form-group">
+							  <label for="usr">Name:</label>
+							  <input type="text" name="addAuthor" id="addAuthor" class="form-control"><br>
+							</div>
+							<br>
+							<div class="form-group">
+							  <label for="usr">Rate:</label>
+							  <input type="number" name="addRate" id="addRate" class="form-control"><br>
+							</div>
+							<br>
+							<div class="form-group">
+							  <label for="usr">Comment:</label>
+							  <input type="text" name="addComment" id="addComment" class="form-control"><br>	
+							</div>
+								
+							<button id="addReviewButton" onclick="add()" class="btn btn-success">Add Review</button>
+
+						</div>
+						<p id="inform" hidden="hidden">*You can click on the map for adding a new restaurant*</p>
+						<br>
+						
+					</div>
+				</div>
+			
+			
+				<div id="addRest" hidden="hidden" class="container">
+					<h1 style="text-align:center;">Add Restaurant</h1>
+					<div class="form-group">
+					  <label for="usr">Name of Restaurant:</label>
+					  <input type="text" name="restName" id="restName" class="form-control">
+					</div>
+					<br>
+					<div class="form-group">
+					  <label for="usr">Address:</label>
+					  <input type="text" name="restAddress" id="restAddress" class="form-control"><br>
+					</div>
+					<br>
+					<div class="form-group">
+					  <label for="usr">Rate:</label>
+					  <input type="number" name="restRate" id="restRate" class="form-control"><br>
+					</div>
+					<br>
+					<div class="form-group">
+					  <label for="usr">Comment:</label>
+					  <input type="text" name="restComment" id="restComment" class="form-control"><br>
+					</div>
+					<br>
+					<div class="form-group">
+					  <label for="usr">Name of Author:</label>
+					  <input type="text" name="restAuthor" id="restAuthor" class="form-control" ><br>
+					</div>
+					<br>
+					<button id="addRestButton" onclick="addRestButton()" class="btn btn-success">Add New Restaurant</button>
+					<button id="addRestButton" onclick="cancel()" class="btn btn-success">Cancel</button>
+
+					
+				</div>
+		</div>
+
+		
+	    <script src="map.js"></script>
+	    <script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
+	  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBII9s4OSF2dylCLvdCmCp5PpaHVXqUb9I&libraries=places&callback=initMap"></script>
+	</body>
+	</html>
